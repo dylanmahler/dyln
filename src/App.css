@@ -21,6 +21,7 @@ body {
 
 .App {
   display: flex;
+  flex-direction: row;
   width: 100%;
   min-height: 100vh;
 }
@@ -33,6 +34,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .light-mode {
@@ -85,6 +87,59 @@ body {
 
 .control-button:active {
   transform: scale(0.98);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .section {
+    min-height: 50vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .section h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .controls {
+    bottom: 1rem;
+    left: 50%;
+    right: auto;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+  }
+
+  .control-button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1rem;
+    min-height: 50vh;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .controls {
+    bottom: 0.75rem;
+    width: calc(100% - 1.5rem);
+  }
+
+  .control-button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
 }
 
 
